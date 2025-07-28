@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Telegram Reward Bot</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Navigation -->
+  <div class="nav">
+    <button onclick="showSection('home')">Home</button>
+    <button onclick="showSection('earn')">Earn</button>
+    <button onclick="showSection('referral')">Referral</button>
+    <button onclick="showSection('balance')">Balance</button>
+  </div>
+
+  <!-- Sections -->
+  <div id="home" class="section active">
+    <h2>Welcome, <span id="username"></span></h2>
+    <img id="avatar" src="" alt="avatar" width="100" />
+    <p>Stats will go here...</p>
+  </div>
+
+  <div id="earn" class="section">
+    <div class="task-box">🧩 Task Placeholder</div>
+    <button onclick="handleTaskComplete()">Complete Task</button>
+  </div>
+
+  <div id="referral" class="section">
+    <p>Your referral link:</p>
+    <input id="refLink" readonly />
+    <p>Referrals: <span id="refCount">0</span></p>
+    <p>Earnings from referrals: <span id="refEarnings">0</span> points</p>
+  </div>
+
+  <div id="balance" class="section">
+    <p>Your Points: <span id="points">0</span></p>
+    <p>1 Referral = 100 Points</p>
+  </div>
+
+  <!-- Telegram & Firebase Scripts -->
+  <script src="https://telegram.org/js/telegram-web-app.js"></script>
+  <script type="module" src="./script.js"></script>
+</body>
+</html>
